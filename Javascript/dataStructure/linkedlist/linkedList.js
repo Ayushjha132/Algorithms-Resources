@@ -111,6 +111,43 @@ class LinkedList {
     this.length--;
     return this.printList();
   }
+
+  reverse() {
+    if (!this.head.next) {
+      return this.head;
+    }
+    let first = this.head;
+    this.tail = this.head;
+    let second = first.next;
+    while (second) {
+      const temp = second.next;
+      second.next = first;
+      first = second;
+      second = temp;
+    }
+    this.head.next = null;
+    this.head = first;
+    return this;
+  }
+
+  reverse1() {
+    if (!this.head.next) {
+      return this.head;
+    }
+    let prevNode = null;
+    let nextNode = null;
+    let headNode = this.head;
+    this.tail = this.head;
+
+    while (headNode !== null) {
+      nextNode = headNode.next;
+      headNode.next = prevNode;
+      prevNode = headNode;
+      headNode = nextNode;
+    }
+    this.head = prevNode;
+    return this
+  }
 }
 //o(n)
 
@@ -124,5 +161,7 @@ myLinkedList.append(90);
 myLinkedList.prepend(50);
 myLinkedList.insert(2, 40);
 myLinkedList.insert(30, 11);
-myLinkedList.remove(4);
-console.log(myLinkedList.printList())
+//myLinkedList.remove(4);
+console.log(myLinkedList.printList());
+myLinkedList.reverse1();
+console.log(myLinkedList.printList());
