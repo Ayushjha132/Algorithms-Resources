@@ -1,0 +1,31 @@
+
+
+Trees are a special type of data structures. 
+
+  Binary Trees:
+    /       \
+   /         \
+Perfect      Full Binary Trees
+Binary Trees
+
+Perfect Binary Trees: 
+  -- Each level have twice the number of nodes than the level above
+  -- sum of no. of all nodes on leaf is equal to the no of all nodes above + 1
+
+Full Binary Trees:
+  -- it will be a Binary Tree but all the level are not equal in terms of nodes each side contains.
+
+Binary Search Tree: 
+  -- right of nodes will be have greater value and left side will have smaller values.
+  -- In a Binary Trees,
+  -- e.g.
+          -- Binary Trees --
+
+                50
+              /    \
+            45      67
+          /   \    /  \
+        12    49  60   300
+      / 
+    9
+            
