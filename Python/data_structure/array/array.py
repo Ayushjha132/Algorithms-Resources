@@ -6,9 +6,10 @@ tuple --> []
 
 """
 
-
-# using list
-#
+# unlike in js everything is Object except primitve data type, Python has little different implementation.
+# Currently, I am using list to implemet array concept instead we can also use object or dict for the same.
+# Note: Handling exception is also very important on the go because sometime it become very teadious to handle
+# exception.
 
 
 class MyArray:
@@ -35,8 +36,6 @@ class MyArray:
     def showArray(self):
         print(self.array, "\nlength: ", self.arrlen)
 
-
-arr = MyArray()
 
 arr = MyArray()
 arr.push(10)
